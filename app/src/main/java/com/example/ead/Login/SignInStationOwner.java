@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+//create login for signIn for StationOwner
 public class SignInStationOwner extends AppCompatActivity {
 
     private TextView signUp,name,password;
@@ -62,6 +63,7 @@ public class SignInStationOwner extends AppCompatActivity {
         });
     }
 
+    //create post method for login Station Owner
     private void LoginStationOwner(){
 
         HashMap<String,String> params = new HashMap<String,String>();

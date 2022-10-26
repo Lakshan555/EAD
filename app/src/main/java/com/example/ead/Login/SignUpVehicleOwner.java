@@ -54,6 +54,7 @@ public class SignUpVehicleOwner extends AppCompatActivity {
         });
     }
 
+    //Register vehicle owner details
     private void SignUPDriver(){
 
         HashMap<String,String> params = new HashMap<String,String>();

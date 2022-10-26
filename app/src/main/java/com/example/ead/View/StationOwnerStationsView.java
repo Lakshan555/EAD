@@ -29,8 +29,8 @@ public class StationOwnerStationsView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_owner_stations_view);
 
-
-        recyclerView = findViewById(R.id.recycerlview);
+//
+//        recyclerView = findViewById(R.id.recycerlview);
 
         getAllStation();
 

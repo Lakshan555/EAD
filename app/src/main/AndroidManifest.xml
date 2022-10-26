@@ -14,9 +14,9 @@
         <activity
             android:name=".InputFuelStatus"
             android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".View.StationOwnerStationsView"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".View.StationOwnerStationsView"
+            android:exported="true" />
         <activity
             android:name=".Home.HomeStationOwner"
             android:exported="true" />
@@ -48,7 +48,7 @@
             android:name=".Login.SignInStationOwner"
             android:exported="true" />
         <activity
-            android:name=".View.StationOwnerStationsView"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

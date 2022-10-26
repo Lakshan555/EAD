@@ -39,7 +39,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.666"
         app:srcCompat="@drawable/fuel_now_logos_white" />
+
     <LinearLayout
+        android:id="@+id/recycerlview"
         android:layout_width="362dp"
         android:layout_height="599dp"
         android:layout_marginTop="126dp"

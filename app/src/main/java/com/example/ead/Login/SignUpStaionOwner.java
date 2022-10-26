@@ -55,7 +55,7 @@ public class SignUpStaionOwner extends AppCompatActivity {
         });
 
     }
-
+    //this will crate  Station owner
     private void SignUPStationOwner(){
 
         HashMap<String,String> params = new HashMap<String,String>();
@@ -113,7 +113,7 @@ public class SignUpStaionOwner extends AppCompatActivity {
 
     }
 
-
+   //Create new fuel Station
     private void AddFuelStation(String id){
 
         HashMap<String,String> params = new HashMap<String,String>();

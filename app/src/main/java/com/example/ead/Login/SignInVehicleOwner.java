@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+//create login for signIn for Vehicle owner
 public class SignInVehicleOwner extends AppCompatActivity {
 
     private TextView signUp,name,password;
@@ -58,6 +59,7 @@ public class SignInVehicleOwner extends AppCompatActivity {
         });
     }
 
+    //This will create post request for login
     private void LoginDriver(){
 
         HashMap<String,String> params = new HashMap<String,String>();
