@@ -1,6 +1,7 @@
 package com.example.ead.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -20,11 +21,17 @@ import org.json.JSONObject;
 public class StationOwnerStationsView extends AppCompatActivity {
 
     private RequestQueue queue;
+    private RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_owner_stations_view);
+
+
+        recyclerView = findViewById(R.id.recycerlview);
+
         getAllStation();
 
     }
