@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/add_reminder__1_"
-    tools:context=".Home.HomeVehicleOwner">
+    tools:context=".View.VehicleOwnerStationsView">
     <TextView
         android:id="@+id/Headline"
         android:layout_width="wrap_content"
@@ -52,11 +52,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textHom"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Home"
+            android:text="Stations"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -65,25 +65,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="30dp"
-            android:drawableStart="@drawable/ic_baseline_person_100"
+            android:drawableStart="@drawable/ic_baseline_local_gas_station_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
             android:gravity="center_horizontal"
             android:background="@drawable/btn_main"
             android:textColor="@color/white"
             android:layout_marginTop="40dp"
             android:textSize="17dp"
-            android:text="My Profile" />
+            android:text="Ceypetco Kaduwela" />
 
         <Button
-            android:id="@+id/vOStationBtn"
+            android:id="@+id/stationBtn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="30dp"
             android:drawableStart="@drawable/ic_baseline_local_gas_station_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
             android:gravity="center_horizontal"
             android:background="@drawable/btn_main"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:textSize="17dp"
-            android:text="Fuel Stations" />
+            android:text="Laugfs Gas Kaduwela"  />
+
+        <Button
+            android:id="@+id/stationBtn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:drawableStart="@drawable/ic_baseline_local_gas_station_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:gravity="center_horizontal"
+            android:background="@drawable/btn_main"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:text="IOC Kaduwela"  />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

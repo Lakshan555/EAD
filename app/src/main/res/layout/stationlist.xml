@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view = "http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="392dp"
-        android:layout_height="727dp"
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginTop="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -15,26 +16,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="374dp"
-            android:layout_height="737dp"
-            android:orientation="vertical">
+        <Button
+            android:id="@+id/noticeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/btn_main"
+            android:drawableStart="@drawable/ic_baseline_local_gas_station_24"
+            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+            android:gravity="center_horizontal"
+            android:padding="30dp"
+            android:text="name"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
 
-            <Button
-                android:id="@+id/mProfileBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/btn_main"
-                android:drawableStart="@drawable/ic_baseline_local_gas_station_24"
-                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-                android:gravity="center_horizontal"
-                android:padding="30dp"
-                android:text="name"
-                android:textColor="@color/white"
-                android:textSize="17dp" />
+        <LinearLayout
+            android:layout_width="361dp"
+            android:layout_height="114dp"
+            android:orientation="vertical">
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

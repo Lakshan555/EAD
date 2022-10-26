@@ -1,14 +1,16 @@
-package com.example.ead;
+package com.example.ead.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Home extends AppCompatActivity {
+import com.example.ead.R;
+
+public class FuelDetailsVehicleOwnerView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_fuel_detailsdriver_view);
     }
 }

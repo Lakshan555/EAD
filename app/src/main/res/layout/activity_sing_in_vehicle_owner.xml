@@ -43,21 +43,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <EditText
-            android:id="@+id/signInVNo"
+            android:id="@+id/signInDVNo"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
             android:drawableStart="@drawable/ic_baseline_drive_eta_24"
             android:drawablePadding="5dp"
             android:ems="10"
-            android:hint="Vehical Number"
+            android:hint="Vehicle Number"
             android:inputType="textPersonName"
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/signInVNo2"
+            android:id="@+id/signInDPass"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"

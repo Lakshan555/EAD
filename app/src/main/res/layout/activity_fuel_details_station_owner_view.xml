@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/add_reminder__1_"
-    tools:context=".View.FuelDetailsVehicleOwnerView">
+    tools:context=".View.FuelDetailsStationOwnerView">
 
     <TextView
         android:id="@+id/Headline"
@@ -528,7 +528,7 @@
             android:layout_weight="1"
             android:textColor="@color/black"
             android:background="@drawable/round_yellow_box"
-            android:text="Arrived" />
+            android:text="Update Status" />
 
         <Button
             android:id="@+id/button4"
@@ -538,7 +538,7 @@
             android:textColor="@color/white"
             android:background="@drawable/round_red_box"
             android:layout_marginLeft="5dp"
-            android:text="Departed" />
+            android:text="Closed Station" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

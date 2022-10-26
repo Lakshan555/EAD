@@ -101,7 +101,8 @@
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
             android:textColorHint="#000000"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/iSDiesel"
@@ -117,7 +118,8 @@
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
             android:textColorHint="#000000"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/iPetrol92"
@@ -133,7 +135,8 @@
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
             android:textColorHint="#000000"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/iPetrol95"
@@ -149,7 +152,8 @@
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
             android:textColorHint="#000000"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/atime"

@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <EditText
-            android:id="@+id/signInVNo"
+            android:id="@+id/signInSRNo"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -57,7 +57,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/signInVNo2"
+            android:id="@+id/signInSPass"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -72,7 +72,7 @@
             android:textColorHint="#000000" />
 
         <Button
-            android:id="@+id/SignInBtn"
+            android:id="@+id/SignInSOBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

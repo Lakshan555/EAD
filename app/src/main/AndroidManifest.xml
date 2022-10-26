@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ead">
+    package="com.example.ead" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,18 +10,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EAD">
+        android:theme="@style/Theme.EAD" >
+        <activity
+            android:name=".View.StationOwnerStationsView"
+            android:exported="true" />
+        <activity
+            android:name=".Home.HomeStationOwner"
+            android:exported="true" />
+        <activity
+            android:name=".View.FuelDetailsStationOwnerView"
+            android:exported="true" />
         <activity
             android:name=".UpdateFuelStatus"
             android:exported="true" />
         <activity
-            android:name=".FuelDetailsDriverView"
+            android:name=".View.FuelDetailsVehicleOwnerView"
             android:exported="true" />
         <activity
-            android:name=".Stations"
+            android:name=".View.VehicleOwnerStationsView"
             android:exported="true" />
         <activity
-            android:name=".Home"
+            android:name=".Home.HomeVehicleOwner"
             android:exported="true" />
         <activity
             android:name=".Login.SignUpVehicleOwner"
@@ -35,7 +46,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
