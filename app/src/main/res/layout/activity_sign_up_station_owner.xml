@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <EditText
-            android:id="@+id/oName"
+            android:id="@+id/singUpSOName"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -58,7 +58,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/nicNo"
+            android:id="@+id/singUpSONicNo"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -73,7 +73,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/signUpSNo"
+            android:id="@+id/singUpSTNo"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -88,7 +88,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/vNo"
+            android:id="@+id/singUpSoReg"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -103,7 +103,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/fType"
+            android:id="@+id/singUpSoFtype"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -118,7 +118,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/signInVNo2"
+            android:id="@+id/singUpSoPass"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/text_box"
@@ -134,7 +134,7 @@
 
 
         <Button
-            android:id="@+id/SignUpBtn"
+            android:id="@+id/SignUpSOBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

@@ -17,10 +17,11 @@
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_fuel_detailsdriver_view.xml" value="0.264" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_home_station_owner.xml" value="0.16126126126126125" />
+        <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_input_fuel_status.xml" value="0.176" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
-        <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sign_up_station_owner.xml" value="0.2" />
-        <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sign_up_vehicle_owner.xml" value="0.10990990990990991" />
+        <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sign_up_station_owner.xml" value="0.264" />
+        <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sign_up_vehicle_owner.xml" value="0.176" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sing_in.xml" value="0.2" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sing_in_station_owner.xml" value="0.264" />
         <entry key="..\:/Projects/4year/EAD3/app/src/main/res/layout/activity_sing_in_vehicle_owner.xml" value="0.264" />

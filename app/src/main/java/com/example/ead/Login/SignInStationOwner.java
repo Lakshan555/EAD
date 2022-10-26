@@ -1,4 +1,6 @@
 package com.example.ead.Login;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+
+
 
 import com.example.ead.Home.HomeStationOwner;
-import com.example.ead.Home.HomeVehicleOwner;
 import com.example.ead.R;
 
 import com.android.volley.Request;
@@ -21,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -63,12 +66,12 @@ public class SignInStationOwner extends AppCompatActivity {
 
         HashMap<String,String> params = new HashMap<String,String>();
 
-        params.put("uniqueIdentifier",name.getText().toString());
+        params.put("identifier",name.getText().toString());
         params.put("password",password.getText().toString());
-        params.put("userType",userType);
+        params.put("user_type",userType);
 
         queue = Volley.newRequestQueue(this);
-        String url = "https://pasindu-fuelapi.herokuapp.com/users/login";
+        String url = "https://ishankafuel.herokuapp.com/users/login";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
 
@@ -76,9 +79,20 @@ public class SignInStationOwner extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         Log.e("Success ",response.toString());
 
-                        Toast.makeText(SignInStationOwner.this,"Success", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(SignInStationOwner.this, HomeStationOwner.class);
-                        startActivity(intent);
+                        try {
+                            if(response.get("isSuccessful").equals(true)){
+                                Log.e("Success ",response.get("isSuccessful").toString());
+                                Intent intent = new Intent(SignInStationOwner.this, HomeStationOwner.class);
+                                startActivity(intent);
+                            }
+                            else{
+                                Toast.makeText(SignInStationOwner.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
                     }
                 }, new Response.ErrorListener(){
 
@@ -89,7 +103,6 @@ public class SignInStationOwner extends AppCompatActivity {
                     }
                 });
         queue.add(jsonObjectRequest);
-
 
     }
 }

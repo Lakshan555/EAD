@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -15,10 +16,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ead.Home.HomeStationOwner;
 import com.example.ead.Home.HomeVehicleOwner;
 import com.example.ead.R;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -38,7 +39,7 @@ public class SignInVehicleOwner extends AppCompatActivity {
         name = (TextView) findViewById(R.id.signInDVNo);
         password = (TextView) findViewById(R.id.signInDPass);
         signUp = (TextView) findViewById(R.id.noAcRegText);
-        btn = findViewById(R.id.SignInBtn);
+        btn = findViewById(R.id.SignUpVOBtn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,20 +62,32 @@ public class SignInVehicleOwner extends AppCompatActivity {
 
         HashMap<String,String> params = new HashMap<String,String>();
 
-        params.put("uniqueIdentifier",name.getText().toString());
+        params.put("identifier",name.getText().toString());
         params.put("password",password.getText().toString());
-        params.put("userType",userType);
+        params.put("user_type",userType);
 
         queue = Volley.newRequestQueue(this);
-        String url = "https://pasindu-fuelapi.herokuapp.com/users/login";
+        String url = "https://ishankafuel.herokuapp.com/users/login";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
 
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.e("Success ",response.toString());
-                        Intent intent = new Intent(SignInVehicleOwner.this, HomeVehicleOwner.class);
-                        startActivity(intent);
+
+                        try {
+                            if(response.get("isSuccessful").equals(true)){
+                                Log.e("Success ",response.get("isSuccessful").toString());
+                                Intent intent = new Intent(SignInVehicleOwner.this, HomeVehicleOwner.class);
+                                startActivity(intent);
+                            }
+                            else{
+                                Toast.makeText(SignInVehicleOwner.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
 
                     }
                 }, new Response.ErrorListener(){
