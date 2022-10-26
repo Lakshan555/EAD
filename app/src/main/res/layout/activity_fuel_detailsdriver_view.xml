@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/add_reminder__1_"
-    tools:context=".FuelDetailsdriverView">
+    tools:context=".FuelDetailsDriverView">
 
     <TextView
         android:id="@+id/Headline"

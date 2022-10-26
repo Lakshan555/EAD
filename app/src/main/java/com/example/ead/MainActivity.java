@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ead.Login.SignInStationOwner;
+import com.example.ead.Login.SignInVehicleOwner;
+
+
 public class MainActivity extends AppCompatActivity {
     private Button voBtn;
     private Button sOBtn;
@@ -21,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         voBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,UpdateFuelStatus.class);
+                Intent intent = new Intent(MainActivity.this,SignInVehicleOwner.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         sOBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,SignIn.class);
+                Intent intent = new Intent(MainActivity.this, SignInStationOwner.class);
                 startActivity(intent);
             }
         });

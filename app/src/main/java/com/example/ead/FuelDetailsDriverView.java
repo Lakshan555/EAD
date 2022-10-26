@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FuelDetailsdriverView extends AppCompatActivity {
+public class FuelDetailsDriverView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

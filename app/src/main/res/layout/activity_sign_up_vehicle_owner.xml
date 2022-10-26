@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/plain_back"
-    tools:context=".SignUp">
+    tools:context=".Login.SignUpVehicleOwner">
 
     <ImageView
         android:id="@+id/imageView5"

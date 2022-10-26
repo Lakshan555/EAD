@@ -13,7 +13,7 @@
             android:name=".UpdateFuelStatus"
             android:exported="true" />
         <activity
-            android:name=".FuelDetailsdriverView"
+            android:name=".FuelDetailsDriverView"
             android:exported="true" />
         <activity
             android:name=".Stations"
@@ -22,10 +22,16 @@
             android:name=".Home"
             android:exported="true" />
         <activity
-            android:name=".SignUp"
+            android:name=".Login.SignUpVehicleOwner"
             android:exported="true" />
         <activity
-            android:name=".SignIn"
+            android:name=".Login.SignInVehicleOwner"
+            android:exported="true" />
+        <activity
+            android:name=".Login.SignUpStaionOwner"
+            android:exported="true" />
+        <activity
+            android:name=".Login.SignInStationOwner"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
