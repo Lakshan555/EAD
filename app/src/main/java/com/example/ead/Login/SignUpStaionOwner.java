@@ -48,7 +48,7 @@ public class SignUpStaionOwner extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SignUpStaionOwner.this, "Clicked!", Toast.LENGTH_SHORT).show();
+
                 SignUPStationOwner();
 
             }
@@ -82,18 +82,15 @@ public class SignUpStaionOwner extends AppCompatActivity {
 
                                 JSONObject user = response.getJSONObject("user");
                                 String id = user.getString("id");
-
-                                Log.e("Success ",id);
-
                                 AddFuelStation(id);
 
                             }
                             else{
-                                Toast.makeText(SignUpStaionOwner.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(SignUpStaionOwner.this, "Exception!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                         }
 
 
@@ -103,7 +100,7 @@ public class SignUpStaionOwner extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // TODO: Handle error
-                        Log.e("Error",error.toString());
+                        Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                     }
                 });
         queue.add(jsonObjectRequest);
@@ -131,16 +128,21 @@ public class SignUpStaionOwner extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             if(response.get("isSuccessful").equals(true)){
-                                Log.e("Success ",response.toString());
-                                Intent intent = new Intent(SignUpStaionOwner.this, SignInStationOwner.class);
-                                startActivity(intent);
+
+                                JSONObject station = response.getJSONObject("fuelStation");
+                                String sId = station.getString("_id");
+
+                                Log.e("Success ",sId);
+
+                                AddQueue(sId);
+
                             }
                             else{
-                                Toast.makeText(SignUpStaionOwner.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(SignUpStaionOwner.this, "Exception!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                         }
 
 
@@ -150,10 +152,53 @@ public class SignUpStaionOwner extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // TODO: Handle error
-                        Log.e("Error",error.toString());
+                        Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                     }
                 });
         queue.add(jsonObjectRequest);
 
     }
+
+    //add new queue
+    private void AddQueue(String sId){
+        HashMap<String,String> params = new HashMap<String,String>();
+
+        params.put("station_Id",sId);
+
+        queue = Volley.newRequestQueue(this);
+        String url = "https://ishankafuel.herokuapp.com/fuel_queues/";
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+                (Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            if(response.get("isSuccessful").equals(true)){
+                                Toast.makeText(SignUpStaionOwner.this, "Successfully registered", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpStaionOwner.this, SignInStationOwner.class);
+                                startActivity(intent);
+                            }
+                            else{
+                                Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
+                        }
+
+
+                    }
+                }, new Response.ErrorListener(){
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // TODO: Handle error
+                        Toast.makeText(SignUpStaionOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        queue.add(jsonObjectRequest);
+
+    }
+
+
 }

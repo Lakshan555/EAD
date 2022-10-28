@@ -110,7 +110,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/dValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -144,7 +144,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/sdValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -178,7 +178,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/p92Value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -212,7 +212,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/p95Value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

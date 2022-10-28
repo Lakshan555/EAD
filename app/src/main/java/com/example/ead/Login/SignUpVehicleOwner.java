@@ -81,16 +81,16 @@ public class SignUpVehicleOwner extends AppCompatActivity {
 
                         try {
                             if(response.get("isSuccessful").equals(true)){
-                                Log.e("Success ",response.get("user").toString());
+                                Toast.makeText(SignUpVehicleOwner.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(SignUpVehicleOwner.this, SignInVehicleOwner.class);
                                 startActivity(intent);
                             }
                             else{
-                                Toast.makeText(SignUpVehicleOwner.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpVehicleOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(SignUpVehicleOwner.this, "Exception!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpVehicleOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                         }
 
 
@@ -100,7 +100,7 @@ public class SignUpVehicleOwner extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // TODO: Handle error
-                        Log.e("Error",error.toString());
+                        Toast.makeText(SignUpVehicleOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                     }
                 });
                 queue.add(jsonObjectRequest);

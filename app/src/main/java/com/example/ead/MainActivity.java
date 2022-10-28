@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.ead.Login.SignInStationOwner;
 import com.example.ead.Login.SignInVehicleOwner;
+import com.example.ead.View.FuelDetailsStationOwnerView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         sOBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SignInStationOwner.class);
+                Intent intent = new Intent(MainActivity.this, FuelDetailsStationOwnerView.class);
                 startActivity(intent);
             }
         });

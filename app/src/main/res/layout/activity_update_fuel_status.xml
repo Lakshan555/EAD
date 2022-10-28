@@ -164,7 +164,7 @@
             android:textColor="#E8E80F" />
 
         <EditText
-            android:id="@+id/iADiesel"
+            android:id="@+id/fiADiesel"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -180,7 +180,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/iASDiesel"
+            android:id="@+id/fiASDiesel"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -196,7 +196,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/iAPetrol92"
+            android:id="@+id/fiAPetrol92"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -212,7 +212,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/iAPetrol95"
+            android:id="@+id/fiAPetrol95"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -238,7 +238,7 @@
             android:textColor="#E8E80F" />
 
         <EditText
-            android:id="@+id/iAStockDiesel"
+            android:id="@+id/fAiAStockDiesel"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -254,7 +254,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/iAStockSDiesel"
+            android:id="@+id/fSiAStockSDiesel"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -270,7 +270,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/iAStockPetrol92"
+            android:id="@+id/PiAStockPetrol92"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -286,7 +286,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/iAStockPetrol95"
+            android:id="@+id/FAiAStockPetrol95"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="5dp"
@@ -315,7 +315,7 @@
         app:layout_constraintTop_toBottomOf="@+id/vOwner_btn">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/FABtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

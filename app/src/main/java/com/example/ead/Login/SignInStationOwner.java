@@ -83,12 +83,12 @@ public class SignInStationOwner extends AppCompatActivity {
 
                         try {
                             if(response.get("isSuccessful").equals(true)){
-                                Log.e("Success ",response.get("isSuccessful").toString());
+                                Toast.makeText(SignInStationOwner.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(SignInStationOwner.this, HomeStationOwner.class);
                                 startActivity(intent);
                             }
                             else{
-                                Toast.makeText(SignInStationOwner.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignInStationOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -101,7 +101,7 @@ public class SignInStationOwner extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // TODO: Handle error
-                        Log.e("Error",error.toString());
+                        Toast.makeText(SignInStationOwner.this, "Some ting went wrong!!", Toast.LENGTH_SHORT).show();
                     }
                 });
         queue.add(jsonObjectRequest);
