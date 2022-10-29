@@ -2,7 +2,9 @@ package com.example.ead.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -78,6 +80,11 @@ public class FuelDetailsStationOwnerView extends AppCompatActivity {
     //get updated details
     private void getDetails() {
 
+//        SharedPreferences sharedPref = FuelDetailsStationOwnerView.this.getPreferences(Context.MODE_PRIVATE);
+//        String sid = sharedPref.getString("userId", null);
+//
+//        Log.e("test",sid);
+
         String id = "635ac78a23d441bc8ef83db2";
         queue = Volley.newRequestQueue(this);
         String url = "https://ishankafuel.herokuapp.com/fuel_stations/"+id;
@@ -94,10 +101,10 @@ public class FuelDetailsStationOwnerView extends AppCompatActivity {
                                 JSONObject stations = response.getJSONObject("fuelStations");
                                 JSONArray fd = stations.getJSONArray("fuel_details");
 
-                                 d = fd.getJSONObject(0).getString("quantity");
-                                 sd = fd.getJSONObject(1).getString("quantity");
-                                 p92 = fd.getJSONObject(2).getString("quantity");
-                                 p95 = fd.getJSONObject(3).getString("quantity");
+                                d = fd.getJSONObject(0).getString("quantity");
+                                sd = fd.getJSONObject(1).getString("quantity");
+                                p92 = fd.getJSONObject(2).getString("quantity");
+                                p95 = fd.getJSONObject(3).getString("quantity");
 
                                 dSOValue.setText(d+"L");
                                 sdSOValue.setText(sd+"L");

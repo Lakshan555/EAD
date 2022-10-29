@@ -74,7 +74,12 @@ public class FuelDetailsVehicleOwnerView extends AppCompatActivity {
     //get updated details
     private void getDetails() {
 
-        String id = "635ac78a23d441bc8ef83db2";
+        Intent intent = getIntent();
+
+        String id = intent.getStringExtra("Station_id");
+
+        Log.e("success",id);
+
         queue = Volley.newRequestQueue(this);
         String url = "https://ishankafuel.herokuapp.com/fuel_stations/"+id;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
