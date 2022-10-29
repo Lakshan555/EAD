@@ -2,6 +2,7 @@ package com.example.ead;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +17,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ead.Api.FuelDetail;
+import com.example.ead.Login.SignInVehicleOwner;
 import com.example.ead.Login.SignUpStaionOwner;
+import com.example.ead.View.FuelDetailsStationOwnerView;
 import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
@@ -55,12 +58,28 @@ public class UpdateFuelStatus extends AppCompatActivity {
         FAiAStockPetrol95 = (TextView) findViewById(R.id.FAiAStockPetrol95);
         FABtn = findViewById(R.id.FABtn);
 
+        Intent intent = getIntent();
+
+        String d = intent.getStringExtra("d");
+        String sd = intent.getStringExtra("sd");
+        String p92 = intent.getStringExtra("p92");
+        String p95 = intent.getStringExtra("p95");
+
+        //set values to input field
+        iDiesel.setText(d);
+        iSDiesel.setText(sd);
+        iPetrol92.setText(p92);
+        iPetrol95.setText(p95);
+
+
         FABtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 try {
                     UpdateFuelS();
+                    Intent intent = new Intent(UpdateFuelStatus.this, FuelDetailsStationOwnerView.class);
+                    startActivity(intent);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -75,29 +94,6 @@ public class UpdateFuelStatus extends AppCompatActivity {
         HashMap<String,String> params = new HashMap<String,String>();
         String id = "635ac78a23d441bc8ef83db2";
 
-//        FuelDetail diesel = new FuelDetail("Diesel",iDiesel.toString());
-//        FuelDetail superDiesel = new FuelDetail("Super diesel",iSDiesel.toString());
-//        FuelDetail p92 = new FuelDetail("Petrol 92",iPetrol92.toString());
-//        FuelDetail p95 = new FuelDetail("Petrol 95",iPetrol95.toString());
-
-//        Object[] fd = {
-//                {
-//                    "d"
-//                }
-//        };
-
-//        ArrayList<FuelDetail> fd = new ArrayList<>();
-
-//        FuelDetail[] fd = new FuelDetail[4];
-
-//        fd[0] = new FuelDetail("Diesel",iDiesel.toString());
-//        fd[1] =new FuelDetail("Super diesel",iSDiesel.toString());
-//        fd[2] = new FuelDetail("Petrol 92",iPetrol92.toString());
-//        fd[3] = new FuelDetail("Petrol 95",iPetrol95.toString());
-//        fd.add(diesel);
-//        fd.add(superDiesel);
-//        fd.add(p92);
-//        fd.add(p95);
 
 
 
@@ -129,20 +125,6 @@ public class UpdateFuelStatus extends AppCompatActivity {
         params.put("fuel_details",fd.toString());
 
 
-//        fuel_details: [
-//        {
-//            fuel_type: String,
-//                    quantity: String,
-//        }
-//    ],
-//        arrived_time: [
-//        {
-//            name: String,
-//                    time: String,
-//        }
-//    ],
-
-
         queue = Volley.newRequestQueue(this);
         String url = "https://ishankafuel.herokuapp.com/fuel_stations/"+id;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
@@ -153,10 +135,7 @@ public class UpdateFuelStatus extends AppCompatActivity {
 
                         try {
                             if(response.get("isSuccessful").equals(true)){
-                                Toast.makeText(UpdateFuelStatus.this, "updated", Toast.LENGTH_SHORT).show();
-//                                JSONObject user = response.getJSONObject("user");
-//                                String id = user.getString("id");
-//                                AddFuelStation(id);
+                                Toast.makeText(UpdateFuelStatus.this, "Updated", Toast.LENGTH_SHORT).show();
 
                             }
                             else{
@@ -184,3 +163,5 @@ public class UpdateFuelStatus extends AppCompatActivity {
 
     }
 }
+
+
